@@ -2,15 +2,9 @@
 
 Minimal, cross‑platform directory locator for Bare. Intent‑based APIs: **persistent**, **ephemeral**. Returns normalized absolute paths.
 
----
-
-## Install
-
-```sh
+```console
 npm i bare-dir
 ```
-
----
 
 ## Usage
 
@@ -21,19 +15,15 @@ const data = dir.persistent()
 const cache = dir.ephemeral()
 ```
 
----
-
 ## API
 
-### `dir.persistent() -> string | null`
+### `const path = dir.persistent()`
 
 Data that should survive restarts and OS cleanup.
 
-### `dir.ephemeral() -> string | null`
+### `const path = dir.ephemeral()`
 
 Cache or temporary data that the OS can wipe.
-
----
 
 ## License
 
