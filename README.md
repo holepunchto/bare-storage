@@ -17,15 +17,14 @@ const cache = dir.ephemeral()
 
 ## API
 
-### `const path = dir.persistent()`
+#### `const path = dir.persistent()`
 
 Data that should survive restarts and OS cleanup.
 
-### `const path = dir.ephemeral()`
+#### `const path = dir.ephemeral()`
 
 Cache or temporary data that the OS can wipe.
 
 ## License
 
 Apache-2.0
-
