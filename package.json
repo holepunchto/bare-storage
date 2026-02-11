@@ -1,0 +1,35 @@
+{
+  "name": "bare-storage",
+  "version": "1.0.0",
+  "description": "Minimal, cross-platform directory locator for Bare",
+  "exports": {
+    "./package": "./package.json",
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "binding.c",
+    "binding.js",
+    "CMakeLists.txt",
+    "prebuilds"
+  ],
+  "addon": true,
+  "scripts": {
+    "test": "brittle-bare --coverage test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolo-ribaudo/bare-storage.git"
+  },
+  "author": "Holepunch",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "bare-os": "^3.0.0",
+    "bare-path": "^3.0.0"
+  },
+  "devDependencies": {
+    "brittle": "^3.4.0",
+    "cmake-bare": "^1.1.2"
+  }
+}
