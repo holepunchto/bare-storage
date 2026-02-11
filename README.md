@@ -1,15 +1,15 @@
-# `bare-dir`
+# `bare-storage`
 
 Minimal, cross‑platform directory locator for Bare. Intent‑based APIs: **persistent**, **ephemeral**. Returns normalized absolute paths.
 
 ```console
-npm i bare-dir
+npm i bare-storage
 ```
 
 ## Usage
 
 ```js
-import dir from 'bare-dir'
+import dir from 'bare-storage'
 
 const data = dir.persistent()
 const cache = dir.ephemeral()
