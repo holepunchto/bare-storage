@@ -16,7 +16,8 @@
   ],
   "addon": true,
   "scripts": {
-    "test": "brittle-bare --coverage test.js"
+    "test": "prettier . --check && bare test.js",
+    "format": "prettier . --write && clang-format -i binding.mm"
   },
   "repository": {
     "type": "git",
@@ -25,13 +26,14 @@
   "author": "Holepunch",
   "license": "Apache-2.0",
   "dependencies": {
-    "bare-fs": "^4.5.3",
     "bare-os": "^3.0.0",
     "bare-path": "^3.0.0"
   },
   "devDependencies": {
     "brittle": "^3.4.0",
     "cmake-bare": "^1.1.2",
-    "cmake-fetch": "^1.4.9"
+    "cmake-fetch": "^1.4.9",
+    "prettier": "^3.8.1",
+    "prettier-config-holepunch": "^2.0.0"
   }
 }
