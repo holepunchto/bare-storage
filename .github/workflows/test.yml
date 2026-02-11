@@ -30,6 +30,18 @@ jobs:
             arch: x64
             tags: -simulator
             flags: --simulator
+          - os: ubuntu-24.04
+            platform: android
+            arch: x64
+          - os: ubuntu-24.04
+            platform: android
+            arch: ia32
+          - os: ubuntu-24.04
+            platform: android
+            arch: arm64
+          - os: ubuntu-24.04
+            platform: android
+            arch: arm
     runs-on: ${{ matrix.os }}
     name: ${{ matrix.platform }}-${{ matrix.arch }}${{ matrix.tags }}
     steps:
