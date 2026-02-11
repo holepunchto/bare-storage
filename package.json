@@ -25,6 +25,7 @@
   "author": "Holepunch",
   "license": "Apache-2.0",
   "dependencies": {
+    "bare-fs": "^4.5.3",
     "bare-os": "^3.0.0",
     "bare-path": "^3.0.0"
   },

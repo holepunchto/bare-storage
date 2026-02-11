@@ -3,3 +3,4 @@ prebuilds/
 node_modules/
 package-lock.json
 .cache/
+coverage
