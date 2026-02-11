@@ -30,6 +30,12 @@ jobs:
             arch: x64
             tags: -simulator
             flags: --simulator
+          - os: ubuntu-22.04
+            platform: linux
+            arch: x64
+          - os: ubuntu-22.04-arm
+            platform: linux
+            arch: arm64
           - os: ubuntu-24.04
             platform: android
             arch: x64
@@ -55,4 +61,4 @@ jobs:
       - run: bare-make build
       - run: bare-make install
       - run: npm test
-        if: ${{ matrix.platform == 'darwin' && matrix.arch == 'arm64' }}
+        if: ${{ matrix.platform == 'linux' || (matrix.platform == 'darwin' && matrix.arch == 'arm64') }}

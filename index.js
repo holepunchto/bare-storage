@@ -6,6 +6,8 @@ if (platform === 'darwin' || platform === 'ios') {
   module.exports = require('./lib/apple')
 } else if (platform === 'android') {
   module.exports = require('./lib/android')
+} else if (platform === 'linux') {
+  module.exports = require('./lib/linux')
 } else {
   throw new Error('Unsupported platform: ' + platform)
 }
