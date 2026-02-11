@@ -26,8 +26,7 @@
   "author": "Holepunch",
   "license": "Apache-2.0",
   "dependencies": {
-    "bare-os": "^3.0.0",
-    "bare-path": "^3.0.0"
+    "bare-os": "^3.0.0"
   },
   "devDependencies": {
     "brittle": "^3.4.0",
