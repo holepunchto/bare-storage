@@ -9,7 +9,7 @@
   "files": [
     "index.js",
     "lib",
-    "binding.c",
+    "binding.mm",
     "binding.js",
     "CMakeLists.txt",
     "prebuilds"
@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "brittle": "^3.4.0",
-    "cmake-bare": "^1.1.2"
+    "cmake-bare": "^1.1.2",
+    "cmake-fetch": "^1.4.9"
   }
 }
