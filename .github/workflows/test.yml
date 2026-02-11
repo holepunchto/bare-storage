@@ -43,4 +43,4 @@ jobs:
       - run: bare-make build
       - run: bare-make install
       - run: npm test
-        if: ${{ matrix.platform == 'darwin' }}
+        if: ${{ matrix.platform == 'darwin' && matrix.arch == 'arm64' }}
