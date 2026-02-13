@@ -1,6 +1,6 @@
 {
   "name": "bare-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minimal, cross-platform directory locator for Bare",
   "exports": {
     "./package": "./package.json",
