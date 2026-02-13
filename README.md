@@ -1,8 +1,8 @@
-# `bare-storage`
+# bare-storage
 
-Minimal, cross‑platform directory locator for Bare. Intent‑based APIs: **persistent**, **ephemeral**. Returns normalized absolute paths.
+Minimal, cross‑platform directory locator for Bare. Intent‑based APIs: Persistent or ephemeral. Returns normalized absolute paths.
 
-```console
+```
 npm i bare-storage
 ```
 
