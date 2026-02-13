@@ -4,7 +4,13 @@
   "description": "Minimal, cross-platform directory locator for Bare",
   "exports": {
     "./package": "./package.json",
-    ".": "./index.js"
+    ".": {
+      "darwin": "./lib/apple.js",
+      "ios": "./lib/apple.js",
+      "linux": "./lib/linux.js",
+      "android": "./lib/android.js",
+      "win32": "./lib/win32.js"
+    }
   },
   "files": [
     "index.js",
