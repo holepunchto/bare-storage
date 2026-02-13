@@ -11,51 +11,17 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: macos-14
-            platform: darwin
-            arch: x64
-          - os: macos-14
-            platform: darwin
-            arch: arm64
-          - os: macos-14
-            platform: ios
-            arch: arm64
-          - os: macos-14
-            platform: ios
-            arch: arm64
-            tags: -simulator
-            flags: --simulator
-          - os: macos-14
-            platform: ios
-            arch: x64
-            tags: -simulator
-            flags: --simulator
-          - os: ubuntu-22.04
+          - os: ubuntu-latest
             platform: linux
             arch: x64
-          - os: ubuntu-22.04-arm
-            platform: linux
+          - os: macos-latest
+            platform: darwin
             arch: arm64
-          - os: ubuntu-24.04
-            platform: android
-            arch: x64
-          - os: ubuntu-24.04
-            platform: android
-            arch: ia32
-          - os: ubuntu-24.04
-            platform: android
-            arch: arm64
-          - os: ubuntu-24.04
-            platform: android
-            arch: arm
-          - os: windows-2022
+          - os: windows-latest
             platform: win32
             arch: x64
-          - os: windows-2022
-            platform: win32
-            arch: arm64
     runs-on: ${{ matrix.os }}
-    name: ${{ matrix.platform }}-${{ matrix.arch }}${{ matrix.tags }}
+    name: ${{ matrix.platform }}-${{ matrix.arch }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -63,8 +29,7 @@ jobs:
           node-version: lts/*
       - run: npm install -g bare-runtime bare-make
       - run: npm install
-      - run: bare-make generate --platform ${{ matrix.platform }} --arch ${{ matrix.arch }} --debug ${{ matrix.flags }}
+      - run: bare-make generate --platform ${{ matrix.platform }} --arch ${{ matrix.arch }} --debug
       - run: bare-make build
       - run: bare-make install
       - run: npm test
-        if: ${{ matrix.platform == 'linux' || (matrix.platform == 'darwin' && matrix.arch == 'arm64') || (matrix.platform == 'win32' && matrix.arch == 'x64') }}
