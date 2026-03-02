@@ -59,12 +59,6 @@ else()
   )
 endif()
 
-# target_compile_options(
-#   ${bare_storage_node}
-#   PRIVATE
-#     /GR-
-# )
-
 target_compile_definitions(
   ${bare_storage_node}
   PRIVATE
