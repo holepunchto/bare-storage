@@ -1,6 +1,6 @@
 const test = require('brittle')
-const path = require('bare-path')
-const fs = require('bare-fs')
+const path = require('path')
+const fs = require('fs')
 const dir = require('.')
 
 test('persistent returns a string', (t) => {
