@@ -7,8 +7,8 @@
 static const char *
 bare_storage_persistent_dir(js_env_t *env) {
   NSString *home = NSHomeDirectory();
-  NSString *documents = [home stringByAppendingPathComponent:@"Documents"];
-  return [documents UTF8String];
+  NSString *applicationSupport = [home stringByAppendingPathComponent:@"Library/Application Support"];
+  return [applicationSupport UTF8String];
 }
 
 static const char *
