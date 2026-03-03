@@ -9,7 +9,8 @@
       "ios": "./lib/apple.js",
       "linux": "./lib/linux.js",
       "android": "./lib/android.js",
-      "win32": "./lib/win32.js"
+      "win32": "./lib/win32.js",
+      "default": "./index.js"
     }
   },
   "imports": {
@@ -62,6 +63,7 @@
   "homepage": "https://github.com/holepunchto/bare-storage#readme",
   "dependencies": {
     "bare-compat-napi": "^1.3.9",
+    "bare-env": "^3.0.0",
     "bare-fs": "^4.5.3",
     "bare-os": "^3.0.0",
     "bare-path": "^3.0.0",
