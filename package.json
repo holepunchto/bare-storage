@@ -9,21 +9,46 @@
       "ios": "./lib/apple.js",
       "linux": "./lib/linux.js",
       "android": "./lib/android.js",
-      "win32": "./lib/win32.js"
+      "win32": "./lib/win32.js",
+      "default": "./index.js"
+    }
+  },
+  "imports": {
+    "#binding": {
+      "bare": "./lib/binding/bare.js",
+      "node": "./lib/binding/node.js"
+    },
+    "#runtime": {
+      "bare": "./lib/runtime/bare.js",
+      "node": "./lib/runtime/node.js"
+    },
+    "fs": {
+      "bare": "bare-fs",
+      "default": "fs"
+    },
+    "path": {
+      "bare": "bare-path",
+      "default": "path"
+    },
+    "os": {
+      "bare": "bare-os",
+      "default": "os"
     }
   },
   "files": [
     "index.js",
     "binding.mm",
     "binding.c",
-    "binding.js",
     "CMakeLists.txt",
     "lib",
     "prebuilds"
   ],
   "addon": true,
   "scripts": {
-    "test": "prettier . --check && bare test.js",
+    "test": "npm run lint && npm run test:bare && npm run test:node",
+    "test:bare": "bare test.js",
+    "test:node": "node test.js",
+    "lint": "prettier . --check",
     "format": "prettier . --write"
   },
   "repository": {
@@ -37,14 +62,19 @@
   },
   "homepage": "https://github.com/holepunchto/bare-storage#readme",
   "dependencies": {
+    "bare-compat-napi": "^1.3.9",
+    "bare-env": "^3.0.0",
     "bare-fs": "^4.5.3",
     "bare-os": "^3.0.0",
-    "bare-path": "^3.0.0"
+    "bare-path": "^3.0.0",
+    "require-addon": "^1.2.0"
   },
   "devDependencies": {
     "brittle": "^3.4.0",
     "cmake-bare": "^1.1.2",
     "cmake-fetch": "^1.4.9",
+    "cmake-napi": "^1.2.2",
+    "cmake-npm": "^1.1.0",
     "prettier": "^3.8.1",
     "prettier-config-holepunch": "^2.0.0"
   }
