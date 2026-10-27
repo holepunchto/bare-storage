@@ -15,5 +15,5 @@ switch (os.platform()) {
     module.exports = require('./lib/win32')
     break
   default:
-    throw new Error(`Unsupported platform: ${platform}`)
+    throw new Error(`Unsupported platform: ${os.platform()}`)
 }

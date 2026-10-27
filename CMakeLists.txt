@@ -10,7 +10,7 @@ project(bare_storage C)
 if(APPLE)
   enable_language(OBJCXX)
 
-  fetch_package("github:holepunchto/libjstl#098664c")
+  fetch_package("github:holepunchto/libjstl#1890183")
 endif()
 
 add_bare_module(bare_storage)
